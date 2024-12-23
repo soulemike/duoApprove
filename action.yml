@@ -1,0 +1,25 @@
+name: 'Duo Approve'
+description: 'Utilize a Duo authentication as a method of approving a job'
+inputs:
+  who-to-auth:
+    description: 'The email addresses of individuals to approve'
+    required: true
+    default: ''
+  integration-key:
+    description: 'Duo Auth API integration key ("DI...")'
+    required: true
+    default: ''
+  integration-secret:
+    description: 'Duo Auth API integration secret key'
+    required: true
+    default: ''
+  api-hostname:
+    description: 'Duo Auth API hostname ("api-....duosecurity.com")'
+    required: true
+    default: ''
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'node20'
+  main: 'index.js'
